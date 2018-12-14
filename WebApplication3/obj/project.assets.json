@@ -13431,11 +13431,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\m7amm\\Desktop\\lec6_2\\WebApplication3\\WebApplication3.csproj",
+      "projectUniqueName": "C:\\Users\\m7amm\\Documents\\GitHub\\Travel\\WebApplication3\\WebApplication3.csproj",
       "projectName": "WebApplication3",
-      "projectPath": "C:\\Users\\m7amm\\Desktop\\lec6_2\\WebApplication3\\WebApplication3.csproj",
+      "projectPath": "C:\\Users\\m7amm\\Documents\\GitHub\\Travel\\WebApplication3\\WebApplication3.csproj",
       "packagesPath": "C:\\Users\\m7amm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\m7amm\\Desktop\\lec6_2\\WebApplication3\\obj\\",
+      "outputPath": "C:\\Users\\m7amm\\Documents\\GitHub\\Travel\\WebApplication3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

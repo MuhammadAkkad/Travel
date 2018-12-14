@@ -53,3 +53,14 @@ C:\Users\m7amm\Desktop\lec6_2\WebApplication3\obj\Debug\netcoreapp2.0\WebApplica
 C:\Users\m7amm\Desktop\lec6_2\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.AssemblyInfo.cs
 C:\Users\m7amm\Desktop\lec6_2\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.dll
 C:\Users\m7amm\Desktop\lec6_2\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.pdb
+C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\bin\Debug\netcoreapp2.0\WebApplication3.deps.json
+C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\bin\Debug\netcoreapp2.0\WebApplication3.runtimeconfig.json
+C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\bin\Debug\netcoreapp2.0\WebApplication3.runtimeconfig.dev.json
+C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\bin\Debug\netcoreapp2.0\WebApplication3.dll
+C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\bin\Debug\netcoreapp2.0\WebApplication3.pdb
+C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.csprojAssemblyReference.cache
+C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.csproj.CoreCompileInputs.cache
+C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.AssemblyInfoInputs.cache
+C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.AssemblyInfo.cs
+C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.dll
+C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.pdb

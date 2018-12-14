@@ -247,3 +247,15 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+*.config
+*.config
+.vs/WebApplication3/v15/.suo
+WebApplication3/bin/Debug/netcoreapp2.0/WebApplication3.dll
+WebApplication3/bin/Debug/netcoreapp2.0/WebApplication3.pdb
+WebApplication3/obj/Debug/netcoreapp2.0/WebApplication3.assets.cache
+WebApplication3/obj/Debug/netcoreapp2.0/WebApplication3.csproj.FileListAbsolute.txt
+WebApplication3/obj/Debug/netcoreapp2.0/WebApplication3.dll
+WebApplication3/obj/Debug/netcoreapp2.0/WebApplication3.pdb
+WebApplication3/obj/project.assets.json
+WebApplication3/obj/WebApplication3.csproj.nuget.cache
+WebApplication3/obj/WebApplication3.csproj.nuget.g.props
