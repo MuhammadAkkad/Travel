@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Movie>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Album example</h1>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+        <p>
+            <a href="#" class="btn btn-primary my-2 shadow-lg">Main call to action</a>
+            <a href="#" class="btn btn-secondary my-2 shadow-lg">Secondary action</a>
+        </p>
+    </div>
+</section>
+
+
+
+<div class="card mb-3">
+    <div class="row">
+        @foreach (var movie in Model)
+        {
+
+            <div class="col-md-3">
+                <div class="card mb-3 shadow-lg border-primary" style="margin-top:20px">
+                    <h3 class="card-header">@movie.Name</h3>
+                    <div class="card-body">
+                        <h5 class="card-title">city Name</h5>
+                    </div>
+                    <img style="height: 200px; width: 100%; display: block;" src="~/img/1.jpg" alt="@movie.Name">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a class="card-link" asp-action="Details" asp-route-id="@movie.MovieId">Card link</a>
+                            <a class="card-link" href="#">Another link</a>
+                        </div>
+                    </div>
+                    <div class="card-footer text-info">
+                        somthing about the trip
+                    </div>
+                </div>
+
+
+
+            </div>
+        }
+    </div>
+</div>

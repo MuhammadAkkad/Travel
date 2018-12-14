@@ -1,0 +1,15 @@
+﻿@model Movie
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div class="container shadow-lg border-primary bg-light">
+    <div class="card" style="width:70%; margin-left: auto; margin-right: auto;">
+        <img class="card-img-top" src="~/img/1.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <p class="card-text"> @Model.Desc</p>
+        </div>
+    </div>
+</div>
