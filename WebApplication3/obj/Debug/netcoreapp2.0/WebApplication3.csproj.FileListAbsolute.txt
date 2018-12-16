@@ -64,3 +64,14 @@ C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\W
 C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.AssemblyInfo.cs
 C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.dll
 C:\Users\m7amm\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.pdb
+C:\Users\asus\Documents\GitHub\Travel\WebApplication3\bin\Debug\netcoreapp2.0\WebApplication3.deps.json
+C:\Users\asus\Documents\GitHub\Travel\WebApplication3\bin\Debug\netcoreapp2.0\WebApplication3.runtimeconfig.json
+C:\Users\asus\Documents\GitHub\Travel\WebApplication3\bin\Debug\netcoreapp2.0\WebApplication3.runtimeconfig.dev.json
+C:\Users\asus\Documents\GitHub\Travel\WebApplication3\bin\Debug\netcoreapp2.0\WebApplication3.dll
+C:\Users\asus\Documents\GitHub\Travel\WebApplication3\bin\Debug\netcoreapp2.0\WebApplication3.pdb
+C:\Users\asus\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.csprojAssemblyReference.cache
+C:\Users\asus\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.csproj.CoreCompileInputs.cache
+C:\Users\asus\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.AssemblyInfoInputs.cache
+C:\Users\asus\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.AssemblyInfo.cs
+C:\Users\asus\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.dll
+C:\Users\asus\Documents\GitHub\Travel\WebApplication3\obj\Debug\netcoreapp2.0\WebApplication3.pdb

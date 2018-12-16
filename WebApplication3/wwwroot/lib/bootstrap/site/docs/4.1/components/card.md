@@ -57,7 +57,7 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
     <h5 class="card-title">Card title</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Information</a>
     <a href="#" class="card-link">Another link</a>
   </div>
 </div>
@@ -124,7 +124,7 @@ Mix and match multiple content types to create the card you need, or throw every
     <li class="list-group-item">Vestibulum at eros</li>
   </ul>
   <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Information</a>
     <a href="#" class="card-link">Another link</a>
   </div>
 </div>
