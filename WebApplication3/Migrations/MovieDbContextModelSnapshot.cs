@@ -37,9 +37,17 @@ namespace WebApplication3.Migrations
                     b.Property<int>("MovieId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Country");
+
                     b.Property<string>("Desc");
 
+                    b.Property<string>("Famous");
+
+                    b.Property<string>("FamousSubTitle");
+
                     b.Property<string>("Name");
+
+                    b.Property<int>("Price");
 
                     b.HasKey("MovieId");
 

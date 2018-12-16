@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace WebApplication3.Migrations
 {
-    public partial class initial : Migration
+    public partial class ExtendedMovieClass : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,8 +28,12 @@ namespace WebApplication3.Migrations
                 {
                     MovieId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Country = table.Column<string>(nullable: true),
                     Desc = table.Column<string>(nullable: true),
-                    Name = table.Column<string>(nullable: true)
+                    Famous = table.Column<string>(nullable: true),
+                    FamousSubTitle = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: true),
+                    Price = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

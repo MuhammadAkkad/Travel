@@ -78,21 +78,21 @@
                 <div class="card mb-3 shadow-lg border-primary" style="margin-top:20px">
                     <h3 class="card-header">@movie.Name</h3>
                     <div class="card-body">
-                        <h5 class="card-title">@movie.Continent</h5>
+                        <h5 class="card-title"></h5>
                     </div>
                     <img style="height: 200px; width: 100%; display: block;" src="~/img/1.jpg" alt="@movie.Name">
 
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">@movie.TripSubtitle</p>
+                            <h4 class="card-title">The Greatest thing!</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">@movie.Famous</h6>
+                            <p class="card-text">@movie.FamousSubTitle</p>
                             <a class="card-link" asp-action="Details" asp-route-id="@movie.MovieId">Card link</a>
                             <a class="card-link" href="#">Another link</a>
                         </div>
                     </div>
                     <div class="card-footer text-info">
-                        @movie.price
+                       $@movie.Price
                     </div>
                 </div>
 
