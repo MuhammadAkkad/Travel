@@ -9,34 +9,34 @@ namespace WebApplication3.Controllers
 {
     public class HomeController : Controller
     {
-        MovieDbContext context;
-        public HomeController(MovieDbContext c)
+        TripDbContext context;
+        public HomeController(TripDbContext c)
         {
             context = c;
         }
         public IActionResult Index()
         {
-            //context.Movies.Add(new Movie { Name = "The Godfather", Desc = "asdsa" });
+            //context.Trips.Add(new Trip { City = "The Godfather", Desc = "asdsa" }); // Movies - Movie - Name
             //context.SaveChanges(); 
-            //Movie m = context.Movies.FirstOrDefault(i=>i.Id==1);
-            //m.Name = "Esaretin Bedeli";
-            //context.Movies.Update();
+            //Trip m = context.Movies.FirstOrDefault(i=>i.Id==1);  // Movie
+            //m.Name = "Esaretin Bedeli"; // find it 0000000000000000 ?!
+            //context.Trips.Update(); // Movies
             //context.Save Changes();
-            return View(context.Movies.ToList());
+            return View(context.Trips.ToList()); // Movies
         }
         public IActionResult Details(int id)
         {
-            return View(context.Movies.FirstOrDefault(i=>i.MovieId==id));
+            return View(context.Trips.FirstOrDefault(i=>i.TripId==id)); // Movies - MovieId
         }
         public IActionResult Filter(int cid)
         {
-            var movies = from m in context.Movies
-                         join mc in context.MovieCategories
-                         on m.MovieId equals mc.MovieId
+            var trips = from m in context.Trips //Trips // Movies
+                         join mc in context.TripCategories //TripsCategories // MovieCategories
+                         on m.TripId equals mc.TripId //mc.TripId // MovieId - MovieId
                          where mc.CategoryId == cid
                          select m;
 
-            return View("Index",movies.ToList());
+            return View("Index",trips.ToList()); // movies 000000000000000000
         }
     }
 }

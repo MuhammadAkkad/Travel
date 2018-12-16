@@ -10,8 +10,8 @@ using WebApplication3.Models;
 
 namespace WebApplication3.Migrations
 {
-    [DbContext(typeof(MovieDbContext))]
-    partial class MovieDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(TripDbContext))]
+    partial class TripDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -25,17 +25,19 @@ namespace WebApplication3.Migrations
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Continent");
 
                     b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.Movie", b =>
+            modelBuilder.Entity("WebApplication3.Models.Trip", b =>
                 {
-                    b.Property<int>("MovieId")
+                    b.Property<int>("TripId")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("City");
 
                     b.Property<string>("Country");
 
@@ -45,38 +47,36 @@ namespace WebApplication3.Migrations
 
                     b.Property<string>("FamousSubTitle");
 
-                    b.Property<string>("Name");
-
                     b.Property<int>("Price");
 
-                    b.HasKey("MovieId");
+                    b.HasKey("TripId");
 
-                    b.ToTable("Movies");
+                    b.ToTable("Trips");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.MovieCategory", b =>
+            modelBuilder.Entity("WebApplication3.Models.TripCategory", b =>
                 {
                     b.Property<int>("CategoryId");
 
-                    b.Property<int>("MovieId");
+                    b.Property<int>("TripId");
 
-                    b.HasKey("CategoryId", "MovieId");
+                    b.HasKey("CategoryId", "TripId");
 
-                    b.HasIndex("MovieId");
+                    b.HasIndex("TripId");
 
-                    b.ToTable("MovieCategories");
+                    b.ToTable("TripCategories");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.MovieCategory", b =>
+            modelBuilder.Entity("WebApplication3.Models.TripCategory", b =>
                 {
                     b.HasOne("WebApplication3.Models.Category", "Category")
-                        .WithMany("MovieCategories")
+                        .WithMany("TripCategories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("WebApplication3.Models.Movie", "Movie")
-                        .WithMany("MovieCategories")
-                        .HasForeignKey("MovieId")
+                    b.HasOne("WebApplication3.Models.Trip", "Trip")
+                        .WithMany("TripCategories")
+                        .HasForeignKey("TripId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

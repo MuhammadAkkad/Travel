@@ -8,9 +8,9 @@ namespace WebApplication3.Models
     public class Category
     {
         public int CategoryId { get; set; }
-        public string Name { get; set; }
+        public string Continent { get; set; } // Name
 
-        public List<MovieCategory> MovieCategories { get; set; }
+        public List<TripCategory> TripCategories { get; set; } //MovieCategory - MovieCategories
 
     }
 }
