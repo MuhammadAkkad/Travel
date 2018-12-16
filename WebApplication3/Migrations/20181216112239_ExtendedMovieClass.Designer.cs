@@ -11,8 +11,8 @@ using WebApplication3.Models;
 namespace WebApplication3.Migrations
 {
     [DbContext(typeof(MovieDbContext))]
-    [Migration("20181207155809_initial")]
-    partial class initial
+    [Migration("20181216112239_ExtendedMovieClass")]
+    partial class ExtendedMovieClass
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,9 +38,17 @@ namespace WebApplication3.Migrations
                     b.Property<int>("MovieId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Country");
+
                     b.Property<string>("Desc");
 
+                    b.Property<string>("Famous");
+
+                    b.Property<string>("FamousSubTitle");
+
                     b.Property<string>("Name");
+
+                    b.Property<int>("Price");
 
                     b.HasKey("MovieId");
 

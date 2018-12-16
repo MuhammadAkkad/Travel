@@ -9,11 +9,11 @@
         <p class="lead text-muted"> short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
 
         <div class="container-box rotated">
-            <button type="button" class="btn btn-primary btn-lg turned-button shadow-lg" data-toggle="modal" data-target="#myModal">Reach us</button>
+            <button type="button" class="btn btn-primary btn-lg turned-button shadow-lg" data-toggle="modal" data-target="#ReachUs">Reach us</button>
         </div>
 
         <!-- Modal -->
-        <div id="myModal" class="modal fade" role="dialog">
+        <div id="ReachUs" class="modal fade" role="dialog">
             <div class="modal-dialog">
 
                 <!-- Modal content-->
@@ -23,7 +23,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-header">                        
+                    <div class="modal-header">
                         <h4 class="modal-title">Reach us</h4>
                     </div>
                     <div class="modal-body">
@@ -78,21 +78,87 @@
                 <div class="card mb-3 shadow-lg border-primary" style="margin-top:20px">
                     <h3 class="card-header">@movie.Name</h3>
                     <div class="card-body">
-                        <h5 class="card-title">city Name</h5>
+                        <h5 class="card-title">@movie.Country</h5>
                     </div>
                     <img style="height: 200px; width: 100%; display: block;" src="~/img/1.jpg" alt="@movie.Name">
 
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h4 class="card-title">The Greatest thing!</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">@movie.Famous</h6>
+                            <p class="card-text">@movie.FamousSubTitle</p>
                             <a class="card-link" asp-action="Details" asp-route-id="@movie.MovieId">Card link</a>
-                            <a class="card-link" href="#">Another link</a>
+                            <a class="card-link" data-toggle="modal" href="#BookNow">Book Now!</a>
+                            <!-- Modal -->
+                            <div id="BookNow" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content shadow-lg">
+                                        <div>
+                                            <button type="button" class="close mr-1" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Book Now!</h4>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <form role="form" method="post" id="reused_form">
+
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Name:
+                                                    </label>
+                                                    <input type="text" class="form-control"
+                                                           id="name" name="name" required maxlength="50">
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">
+                                                        Email:
+                                                    </label>
+                                                    <input type="email" class="form-control"
+                                                           id="email" name="email" required maxlength="50">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="quantity">
+                                                        number of people:
+                                                    </label>
+                                                    <input type="number" class="form-control"
+                                                           id="name" name="quantity" min="1" required maxlength="50">
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Date:
+                                                    </label>
+                                                    <input type="date" class="form-control"
+                                                           id="name" name="name" required maxlength="50">
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="message">
+                                                        Message:
+                                                    </label>
+                                                    <textarea class="form-control" type="textarea" name="message"
+                                                              id="message" placeholder="Please provide us with your question and any information we should know"
+                                                              maxlength="6000" rows="7"></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-lg btn-primary btn-block" id="btnContactUs"> <i class="fas fa-shopping-cart"></i> </button>
+                                            </form>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card-footer text-info">
-                        somthing about the trip
+                        $@movie.Price
                     </div>
                 </div>
 

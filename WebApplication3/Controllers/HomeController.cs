@@ -20,7 +20,7 @@ namespace WebApplication3.Controllers
             //context.SaveChanges(); 
             //Movie m = context.Movies.FirstOrDefault(i=>i.Id==1);
             //m.Name = "Esaretin Bedeli";
-            //context.Movies.Update(m);
+            //context.Movies.Update();
             //context.Save Changes();
             return View(context.Movies.ToList());
         }
