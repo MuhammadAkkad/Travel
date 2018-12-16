@@ -10,9 +10,10 @@ namespace WebApplication3.Models
         public int MovieId { get; set; }
         public string Name { get; set; }
         public string Desc { get; set; }
-        public string TripSubtitle { get; set; }
-        public string Continent { get; set; }
-        public int price { get; set; }
+        public string Famous { get; set; } //the famous thing's name
+        public string FamousSubTitle { get; set; }// a brif text about it
+        public string Country { get; set; }
+        public int Price { get; set; }
 
 
 
