@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication3.Models;
+using TravelBlog.Models;
 
-namespace WebApplication3.Controllers
+namespace TravelBlog.Controllers
 {
     public class HomeController : Controller
     {
-        MovieDbContext context;
-        public HomeController(MovieDbContext c)
+        TripDbContext context;
+        public HomeController(TripDbContext c)
         {
             context = c;
         }
@@ -22,21 +22,23 @@ namespace WebApplication3.Controllers
             //m.Name = "Esaretin Bedeli";
             //context.Movies.Update();
             //context.Save Changes();
-            return View(context.Movies.ToList());
+            return View(context.Trips.ToList()); // Movies
         }
         public IActionResult Details(int id)
         {
-            return View(context.Movies.FirstOrDefault(i=>i.MovieId==id));
+            return View(context.Trips.FirstOrDefault(i=>i.TripId==id)); // Movies
         }
         public IActionResult Filter(int cid)
         {
-            var movies = from m in context.Movies
-                         join mc in context.MovieCategories
-                         on m.MovieId equals mc.MovieId
+            var trips = from m in context.Trips // movies - Movies
+                         join mc in context.TripCategories // MovieCategories
+                         on m.TripId equals mc.TripId // MovieId
                          where mc.CategoryId == cid
                          select m;
 
-            return View("Index",movies.ToList());
+            return View("Index", trips.ToList()); // movies
         }
     }
 }
+
+// done

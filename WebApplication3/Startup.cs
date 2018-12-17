@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
-using WebApplication3.Models;
+using TravelBlog.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApplication3
+namespace TravelBlog
 {
     public class Startup
     {
@@ -25,7 +25,7 @@ namespace WebApplication3
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MovieConnection")));
+            services.AddDbContext<TripDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TripConnection")));
             services.AddMvc(); 
         }
 
@@ -38,7 +38,8 @@ namespace WebApplication3
             {
                 app.UseDeveloperExceptionPage();
             }
-           DbInitializer.InitializeDb(app);
+           DbInitializer.InitializeDb(app); // make it as comment when u initiate Migration ... 
         }
     }
 }
+ // done 

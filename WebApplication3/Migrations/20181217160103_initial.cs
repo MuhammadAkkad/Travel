@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
 
-namespace WebApplication3.Migrations
+namespace TravelBlog.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace WebApplication3.Migrations
                 {
                     CategoryId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true)
+                    Continent = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -23,64 +23,64 @@ namespace WebApplication3.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Movies",
+                name: "Trips",
                 columns: table => new
                 {
-                    MovieId = table.Column<int>(nullable: false)
+                    TripId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    City = table.Column<string>(nullable: true),
                     Country = table.Column<string>(nullable: true),
                     Desc = table.Column<string>(nullable: true),
                     Famous = table.Column<string>(nullable: true),
                     FamousSubTitle = table.Column<string>(nullable: true),
-                    Name = table.Column<string>(nullable: true),
                     Photo = table.Column<string>(nullable: true),
                     Price = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Movies", x => x.MovieId);
+                    table.PrimaryKey("PK_Trips", x => x.TripId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "MovieCategories",
+                name: "TripCategories",
                 columns: table => new
                 {
                     CategoryId = table.Column<int>(nullable: false),
-                    MovieId = table.Column<int>(nullable: false)
+                    TripId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MovieCategories", x => new { x.CategoryId, x.MovieId });
+                    table.PrimaryKey("PK_TripCategories", x => new { x.CategoryId, x.TripId });
                     table.ForeignKey(
-                        name: "FK_MovieCategories_Categories_CategoryId",
+                        name: "FK_TripCategories_Categories_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "CategoryId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MovieCategories_Movies_MovieId",
-                        column: x => x.MovieId,
-                        principalTable: "Movies",
-                        principalColumn: "MovieId",
+                        name: "FK_TripCategories_Trips_TripId",
+                        column: x => x.TripId,
+                        principalTable: "Trips",
+                        principalColumn: "TripId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_MovieCategories_MovieId",
-                table: "MovieCategories",
-                column: "MovieId");
+                name: "IX_TripCategories_TripId",
+                table: "TripCategories",
+                column: "TripId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "MovieCategories");
+                name: "TripCategories");
 
             migrationBuilder.DropTable(
                 name: "Categories");
 
             migrationBuilder.DropTable(
-                name: "Movies");
+                name: "Trips");
         }
     }
 }

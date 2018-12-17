@@ -1,16 +1,16 @@
-﻿@model Movie
+﻿@model Trip
 @{
     ViewData["Title"] = "Details";
 }
 
 <div class="jumbotron">
-    <h1 class="display-3">@Model.Name</h1>
+    <h1 class="display-3">@Model.City</h1> <!-- Name -->
     <p class="lead">@Model.Desc</p>
     <hr class="my-4">
-    <img class="card-img-top shadow-lg" src= "@Model.Photo" alt="@Model.Name">
+    <img class="card-img-top shadow-lg" src="@Model.Photo" alt="@Model.City"> <!-- Name -->
 
     <p class="lead text-center mt-lg-5">
-        <a class="btn btn-primary btn-lg btn-block shadow-lg" data-toggle="modal" href="#BookNow"">Book Now!</a>
+        <a class="btn btn-primary btn-lg btn-block shadow-lg" data-toggle="modal" href="#BookNow">Book Now!</a>
     </p>
 
     <!-- Modal -->
@@ -71,7 +71,9 @@
                                       id="message" placeholder="Please provide us with your question and any information we should know"
                                       maxlength="6000" rows="7"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-lg btn-primary btn-block" id="btnContactUs"> <i class="fas fa-shopping-cart"></i> </button>
+                        <button type="submit" class="btn btn-lg btn-primary btn-block" id="btnContactUs">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </form>
                 </div>
 
@@ -80,3 +82,5 @@
         </div>
     </div>
 </div>
+
+<!-- done -->

@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
-using WebApplication3.Models;
+using TravelBlog.Models;
 
-namespace WebApplication3.Migrations
+namespace TravelBlog.Migrations
 {
-    [DbContext(typeof(MovieDbContext))]
-    [Migration("20181217090231_Initial")]
-    partial class Initial
+    [DbContext(typeof(TripDbContext))]
+    [Migration("20181217160103_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,22 +21,24 @@ namespace WebApplication3.Migrations
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("WebApplication3.Models.Category", b =>
+            modelBuilder.Entity("TravelBlog.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Continent");
 
                     b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.Movie", b =>
+            modelBuilder.Entity("TravelBlog.Models.Trip", b =>
                 {
-                    b.Property<int>("MovieId")
+                    b.Property<int>("TripId")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("City");
 
                     b.Property<string>("Country");
 
@@ -46,40 +48,38 @@ namespace WebApplication3.Migrations
 
                     b.Property<string>("FamousSubTitle");
 
-                    b.Property<string>("Name");
-
                     b.Property<string>("Photo");
 
                     b.Property<int>("Price");
 
-                    b.HasKey("MovieId");
+                    b.HasKey("TripId");
 
-                    b.ToTable("Movies");
+                    b.ToTable("Trips");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.MovieCategory", b =>
+            modelBuilder.Entity("TravelBlog.Models.TripCategory", b =>
                 {
                     b.Property<int>("CategoryId");
 
-                    b.Property<int>("MovieId");
+                    b.Property<int>("TripId");
 
-                    b.HasKey("CategoryId", "MovieId");
+                    b.HasKey("CategoryId", "TripId");
 
-                    b.HasIndex("MovieId");
+                    b.HasIndex("TripId");
 
-                    b.ToTable("MovieCategories");
+                    b.ToTable("TripCategories");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.MovieCategory", b =>
+            modelBuilder.Entity("TravelBlog.Models.TripCategory", b =>
                 {
-                    b.HasOne("WebApplication3.Models.Category", "Category")
-                        .WithMany("MovieCategories")
+                    b.HasOne("TravelBlog.Models.Category", "Category")
+                        .WithMany("TripCategories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("WebApplication3.Models.Movie", "Movie")
-                        .WithMany("MovieCategories")
-                        .HasForeignKey("MovieId")
+                    b.HasOne("TravelBlog.Models.Trip", "Trip")
+                        .WithMany("TripCategories")
+                        .HasForeignKey("TripId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
