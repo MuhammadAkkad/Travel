@@ -16,29 +16,21 @@ namespace TravelBlog.Controllers
         }
         public IActionResult Index()
         {
-            //context.Movies.Add(new Movie { Name = "The Godfather", Desc = "asdsa" });
-            //context.SaveChanges(); 
-            //Movie m = context.Movies.FirstOrDefault(i=>i.Id==1);
-            //m.Name = "Esaretin Bedeli";
-            //context.Movies.Update();
-            //context.Save Changes();
-            return View(context.Trips.ToList()); // Movies
+            return View(context.Trips.ToList());
         }
         public IActionResult Details(int id)
         {
-            return View(context.Trips.FirstOrDefault(i=>i.TripId==id)); // Movies
+            return View(context.Trips.FirstOrDefault(i=>i.TripId==id));
         }
         public IActionResult Filter(int cid)
         {
-            var trips = from m in context.Trips // movies - Movies
-                         join mc in context.TripCategories // MovieCategories
-                         on m.TripId equals mc.TripId // MovieId
+            var trips = from m in context.Trips
+                         join mc in context.TripCategories
+                         on m.TripId equals mc.TripId
                          where mc.CategoryId == cid
                          select m;
 
-            return View("Index", trips.ToList()); // movies
+            return View("Index", trips.ToList());
         }
     }
 }
-
-// done

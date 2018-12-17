@@ -7,18 +7,18 @@ namespace TravelBlog.Models
 {
     public class Trip
     {
-        public int TripId { get; set; } // MovieId
-        public string City { get; set; } // Name
+        public int TripId { get; set; }
+        public string City { get; set; }
         public string Desc { get; set; }
-        public string Famous { get; set; } //the famous thing's name
-        public string FamousSubTitle { get; set; } // a brif text about it
+        public string Famous { get; set; }
+        public string FamousSubTitle { get; set; }
         public string Country { get; set; }
         public int Price { get; set; }
         public string Photo { get; set; }
 
 
 
-        public List<TripCategory> TripCategories { get; set; } // MovieCategory - MovieCategories
+        public List<TripCategory> TripCategories { get; set; }
     }
 }
 // done

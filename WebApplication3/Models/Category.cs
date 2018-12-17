@@ -8,10 +8,9 @@ namespace TravelBlog.Models
     public class Category
     {
         public int CategoryId { get; set; }
-        public string Continent { get; set; } // Name
+        public string Continent { get; set; }
 
-        public List<TripCategory> TripCategories { get; set; }  // MovieCategory - MovieCategories
+        public List<TripCategory> TripCategories { get; set; }
 
     }
 }
-// done

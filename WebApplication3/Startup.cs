@@ -21,15 +21,13 @@ namespace TravelBlog
             Configuration = configuration;
         }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<TripDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TripConnection")));
             services.AddMvc(); 
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseStaticFiles();
@@ -38,8 +36,7 @@ namespace TravelBlog
             {
                 app.UseDeveloperExceptionPage();
             }
-           DbInitializer.InitializeDb(app); // make it as comment when u initiate Migration ... 
+           DbInitializer.InitializeDb(app);
         }
     }
 }
- // done 
