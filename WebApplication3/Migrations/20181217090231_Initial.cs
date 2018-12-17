@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace WebApplication3.Migrations
 {
-    public partial class ExtendedMovieClass : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -33,6 +33,7 @@ namespace WebApplication3.Migrations
                     Famous = table.Column<string>(nullable: true),
                     FamousSubTitle = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
+                    Photo = table.Column<string>(nullable: true),
                     Price = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
