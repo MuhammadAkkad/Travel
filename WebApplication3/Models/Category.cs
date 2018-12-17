@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApplication3.Models
+namespace TravelBlog.Models
 {
     public class Category
     {
         public int CategoryId { get; set; }
-        public string Name { get; set; }
+        public string Continent { get; set; }
 
-        public List<MovieCategory> MovieCategories { get; set; }
+        public List<TripCategory> TripCategories { get; set; }
 
     }
 }

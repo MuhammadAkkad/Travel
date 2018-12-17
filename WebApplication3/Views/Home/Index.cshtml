@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Movie>
+﻿@model IEnumerable<Trip>
 @{
     ViewData["Title"] = "Index";
 }
@@ -6,7 +6,13 @@
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">Why to travel?</h1>
-        <p class="lead text-muted"><i>“What you’ve done becomes the judge of what you’re going to do — especially in other people’s minds.  When you’re traveling, you are what you are right there and then.  People don’t have your past to hold against you.  No yesterdays on the road.” <b>-William Least Heat Moon</b></i></p>
+        <p class="lead text-muted">
+            <i>
+                “What you’ve done becomes the judge of what you’re going to do — especially in other people’s minds.
+                When you’re traveling, you are what you are right there and then.  People don’t have your past to hold against you.
+                No yesterdays on the road.” <b>-William Least Heat Moon</b>
+            </i>
+        </p>
 
         <div class="container-box rotated">
             <button type="button" class="btn btn-primary btn-lg turned-button shadow-lg" data-toggle="modal" data-target="#ReachUs">Reach us</button>
@@ -56,7 +62,9 @@
                                           id="message" placeholder="Please provide us with your desired destenation and your questions"
                                           maxlength="6000" rows="7"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs"> <i class="far fa-paper-plane"></i> </button>
+                            <button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs">
+                                <i class="far fa-paper-plane"></i>
+                            </button>
                         </form>
                     </div>
 
@@ -71,24 +79,24 @@
 
 <div class="card mb-3">
     <div class="row">
-        @foreach (var movie in Model)
+        @foreach (var item in Model)
         {
 
             <div class="col-md-3">
                 <div class="card mb-3 shadow-lg border-primary" style="margin-top:20px">
-                    <h3 class="card-header">@movie.Name</h3>
+                    <h3 class="card-header">@item.City</h3> <!-- Name -->
                     <div class="card-body">
-                        <h5 class="card-title">@movie.Country</h5>
+                        <h5 class="card-title">@item.Country</h5>
                     </div>
-                    <img style="height: 200px; width: 100%; display: block;" src="@movie.Photo" alt="@movie.Name">
+                    <img style="height: 200px; width: 100%; display: block;" src="@item.Photo" alt="@item.City"> <!-- Name -->
 
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">The Greatest thing!</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">@movie.Famous</h6>
-                            <p class="card-text">@movie.FamousSubTitle</p>
-                            <a class="card-link" asp-action="Details" asp-route-id="@movie.MovieId">Card link</a>
-                            <a class="card-link" data-toggle="modal" href="#BookNow">Book Now!</a>
+                            <h6 class="card-subtitle mb-2 text-muted">@item.Famous</h6>
+                            <p class="card-text">@item.FamousSubTitle</p>
+                            <a class="card-link" asp-action="Details" asp-route-id="@item.TripId">View Details</a>  <!-- MovieId -->
+                            <a class="card-link" data-toggle="modal" href="#BookNow">Booking info!</a>
                             <!-- Modal -->
                             <div id="BookNow" class="modal fade" role="dialog">
                                 <div class="modal-dialog">
@@ -143,11 +151,14 @@
                                                     <label for="message">
                                                         Message:
                                                     </label>
-                                                    <textarea class="form-control" type="textarea" name="message"
-                                                              id="message" placeholder="Please provide us with your question and any information we should know"
-                                                              maxlength="6000" rows="7"></textarea>
+                                                    <textarea class="form-control" type="textarea" name="message" id="message"
+                                                              placeholder="Please provide us with your question and any information we should know"
+                                                              maxlength="6000" rows="7"> 
+                                                    </textarea>
                                                 </div>
-                                                <button type="submit" class="btn btn-lg btn-primary btn-block" id="btnContactUs"> <i class="fas fa-shopping-cart"></i> </button>
+                                                <button type="submit" class="btn btn-lg btn-primary btn-block" id="btnContactUs">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                </button>
                                             </form>
                                         </div>
 
@@ -158,7 +169,7 @@
                         </div>
                     </div>
                     <div class="card-footer text-info">
-                        $@movie.Price
+                        $@item.Price <!-- movie -->
                     </div>
                 </div>
 
@@ -168,3 +179,6 @@
         }
     </div>
 </div>
+
+
+<!-- done -->
