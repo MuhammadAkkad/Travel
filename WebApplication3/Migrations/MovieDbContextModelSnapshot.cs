@@ -47,6 +47,8 @@ namespace WebApplication3.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<string>("Photo");
+
                     b.Property<int>("Price");
 
                     b.HasKey("MovieId");

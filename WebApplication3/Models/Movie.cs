@@ -14,6 +14,7 @@ namespace WebApplication3.Models
         public string FamousSubTitle { get; set; } // a brif text about it
         public string Country { get; set; }
         public int Price { get; set; }
+        public string Photo { get; set; }
 
 
 

@@ -38,7 +38,7 @@ namespace WebApplication3
             {
                 app.UseDeveloperExceptionPage();
             }
-            DbInitializer.InitializeDb(app);
+           DbInitializer.InitializeDb(app);
         }
     }
 }
