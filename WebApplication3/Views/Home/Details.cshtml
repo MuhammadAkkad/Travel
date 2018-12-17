@@ -3,23 +3,11 @@
     ViewData["Title"] = "Details";
 }
 
-@*
-    <div class="container shadow-lg border-primary bg-light">
-        <div class="card" style="width:70%; margin-left: auto; margin-right: auto;">
-            <img class="card-img-top" src="~/img/1.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">@Model.Name</h5>
-                <p class="card-text"> @Model.Desc</p>
-            </div>
-        </div>
-    </div>
-*@
-
 <div class="jumbotron">
     <h1 class="display-3">@Model.Name</h1>
     <p class="lead">@Model.Desc</p>
     <hr class="my-4">
-    <img class="card-img-top shadow-lg" src= "@Model.Photo" alt="@Model.Desc">
+    <img class="card-img-top shadow-lg" src= "@Model.Photo" alt="@Model.Name">
 
     <p class="lead text-center mt-lg-5">
         <a class="btn btn-primary btn-lg btn-block shadow-lg" data-toggle="modal" href="#BookNow"">Book Now!</a>
@@ -91,6 +79,4 @@
 
         </div>
     </div>
-
-
 </div>
